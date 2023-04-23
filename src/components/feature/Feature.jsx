@@ -1,5 +1,6 @@
 import React from 'react'
 import { motion } from 'framer-motion'
+import { useNavigate } from 'react-router-dom'
 
 import Tcss from '../../assets/tcss2.png'
 import Docker from '../../assets/docker.png'
@@ -12,6 +13,12 @@ import Prisma from '../../assets/prisma.svg'
 
 
 function Feature() {
+  const navigate = useNavigate()
+
+  const handleClick = () => {
+    navigate('/saiba-mais/front-back')
+  }
+
   return (
     <div className='text-white flex flex-col items-center justify-center'>
       <h1 className='text-[3.5rem] mb-4'>
@@ -23,8 +30,8 @@ function Feature() {
         transition={{ duration: 2 }}
         whileInView={{ opacity: 1, y: 1 }}
         className='flex flex-col items-center justify-center '>
-        <h3 className=''>Applications created with the latest features.</h3>
-        <h5 className='mt-10 capitalize'>applications developed with the most used stack in the programming market</h5>
+        <h3 className=''>Aplicativos criados com os recursos mais recentes.</h3>
+        <h5 className='mt-10 capitalize'>aplicativos desenvolvidos com a pilha mais utilizada no mercado de programação</h5>
 
         <div className='flex gap-4 mt-10 flex-wrap justify-center'>
 
@@ -33,7 +40,9 @@ function Feature() {
               <img src={Node} width={40} alt="" />
               <span className='ml-2'> Node Js</span>
             </div>
-            <span>Rapidly build modern websites without ever </span>
+            <span>
+              Ferramenta com alta perfornace e velocidade em backend.
+            </span>
           </div>
 
           <div className='flex flex-col items-center justify-center p-6 bg-[rgb(30,30,24)] text-white rounded-lg'>
@@ -41,7 +50,7 @@ function Feature() {
               <img src={ReactI} width={40} alt="" />
               <span className='ml-2'> React Js</span>
             </div>
-            <span>Rapidly build modern websites without ever </span>
+            <span>A tecnologia usado pelos gigantes da web</span>
           </div>
 
           <div className='flex flex-col items-center justify-center p-6 bg-[rgb(30,30,24)] text-white rounded-lg'>
@@ -49,7 +58,7 @@ function Feature() {
               <img src={Mongo} width={40} alt="" />
               <span className='ml-2'> Mongo Js</span>
             </div>
-            <span>Rapidly build modern websites without ever </span>
+            <span>Um banco de dados seguro e rápido</span>
           </div>
 
           <div className='flex flex-col items-center justify-center p-6 bg-[rgb(30,30,24)] text-white rounded-lg'>
@@ -57,7 +66,7 @@ function Feature() {
               <img src={Firebase} width={40} alt="" />
               <span className='ml-2'> Firebase</span>
             </div>
-            <span>Rapidly build modern websites without ever </span>
+            <span>Serviço de nuvel mais utilizado.</span>
           </div>
 
           <div className='flex flex-col items-center justify-center p-6 bg-[rgb(30,30,24)] text-white rounded-lg'>
@@ -65,15 +74,19 @@ function Feature() {
               <img src={Prisma} width={40} alt="" />
               <span className='ml-2'>Prisma</span>
             </div>
-            <span>Rapidly build modern websites without ever </span>
+            <span>Simple de salvar dados em diversos bancos de dados</span>
           </div>
 
         </div>
 
         <div className='mt-10 mb-20 flex flex-col items-center justify-center'>
           <h1 className='text-4xl mb-3'>FrontEnd & BackEnd</h1>
-          <span>Front and Back developed in and implemented in a scalable and applicable way.</span>
-          <button className='p-4 bg-[rgb(211,48,59)] text-[1rem] font-bold mt-10 rounded-[30px] uppercase'>connet with patreon</button>
+          <span>Front and Back desenvolvido e implementado de forma escalável e aplicável.</span>
+          <button
+            onClick={handleClick}
+            className='p-4 bg-[rgb(211,48,59)] text-[1rem] font-bold mt-10 rounded-[30px] uppercase'>
+            Saiba Mais
+          </button>
         </div>
 
         <div className='flex mb-20 w-full items-center justify-center'>
@@ -84,7 +97,10 @@ function Feature() {
 
         <div className='flex flex-col justify-center items-center'>
           <h1 className='text-4xl mb-4'>Node Js, MongoDB, React JS, React Native. </h1>
-          <span className='mb-10'>These names enabled all this advancement in the technological world</span>
+          <span className='mb-10'>
+            Esses nomes possibilitaram e continuam possibilitando todo esse avanço,
+            escalabilidade, interatividade, permitindo uma visão de futuro sem limites.
+          </span>
 
           <div className='flex gap-5 flex-wrap'>
 
