@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from "@/components/ui/button";
 import { FaWhatsapp } from "react-icons/fa";
 
 function Footer() {
@@ -13,9 +12,9 @@ function Footer() {
   };
   return (
     <div className='mt-10 relative text-white flex flex-col items-center justify-start  w-full h-[200px] border-t-2 border-t-cor-blueTheme'>
-      <Button onClick={openWhatsApp} className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">
+      <button onClick={openWhatsApp} className="flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white px-4 py-2 rounded-lg">
       <FaWhatsapp size={20} /> Entar em contato 
-    </Button>
+    />
 
       <h4 className='absolute bottom-4'>copyright, all reseved ®JRScode 2023. </h4>
 
